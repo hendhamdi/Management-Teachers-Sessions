@@ -1,0 +1,35 @@
+/* Image de fond */
+.root {
+    -fx-background-image: url('../images/image.jpg');
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+/* Réduction de la largeur des colonnes du tableau */
+.table-view {
+    -fx-pref-width: 800px;
+    /* Ajustez la largeur du tableau */
+}
+
+.table-column {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+    -fx-alignment: CENTER;
+}
+
+.table-column-header {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+
+.table-row-cell {
+    -fx-background-color: #fff;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #e1e1e1;
+}

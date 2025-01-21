@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane fitToWidth="true" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EnseignantController">
+    <VBox spacing="10" style="-fx-padding: 20;" stylesheets="@../css/enseignants.css">
+        <HBox spacing="20">
+        root.setStyle("-fx-background-image: url('file:/C:/Users/Hend/OneDrive/Bureau/mini projet java isi/GestionEemplois/src/images/image.png'); -fx-background-size: cover;");
+
+            <!-- VBox pour les formulaires -->
+            <VBox spacing="10" style="-fx-padding: 20;">
+                <!-- Titre du formulaire d'enregistrement des enseignants -->
+                <Label styleClass="titre" text="Formulaire d'enregistrement des enseignants" />
+
+                <!-- Formulaire d'enregistrement des enseignants -->
+                <GridPane hgap="10" vgap="10">
+                    <Label text="Nom :" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <TextField fx:id="nomField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                    <Label text="Matricule :" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <TextField fx:id="matriculeField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <Label text="Contact :" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                    <TextField fx:id="contactField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                    <Button onAction="#chercherEnseignant" text="Chercher" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                    <Button onAction="#enregistrerEnseignant" text="Enregistrer" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    <Button onAction="#modifierEnseignant" text="Modifier" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                    <Button onAction="#supprimerEnseignant" prefHeight="40.0" prefWidth="108.0" text="Supprimer" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+                </GridPane>
+
+                <!-- Formulaire d'enregistrement des séances -->
+                <Label style="-fx-padding: 20 0 0 0;" styleClass="titre" text="Formulaire d'enregistrement des séances" />
+                
+                <GridPane hgap="10" vgap="10">
+                    <Label text="Classe :" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <ComboBox fx:id="classeComboBox" prefHeight="33.0" prefWidth="136.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                    <Label text="Matière :" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <ComboBox fx:id="matiereComboBox" prefHeight="33.0" prefWidth="136.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <Label text="Jour :" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                    <ComboBox fx:id="jourComboBox" prefHeight="33.0" prefWidth="136.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                    <Label text="Heure :" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                    <ComboBox fx:id="heureComboBox" prefHeight="33.0" prefWidth="136.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                    <Label text="Matricule Enseignant :" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                    <TextField fx:id="matriculeEnseignantField" prefHeight="33.0" prefWidth="138.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                    <Button onAction="#enregistrerSeance" text="Enregistrer" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                    <Button onAction="#ouvrirRequetes" prefHeight="40.0" prefWidth="106.0" text="Requêtes" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+                </GridPane>
+            </VBox>
+
+            <!-- VBox pour les tableaux -->
+            <VBox spacing="23" style="-fx-padding: 20;">
+                <!-- TableView pour afficher les enseignants -->
+                <Label styleClass="titre" text="Liste des enseignants" />
+                <TableView fx:id="enseignantsTable" prefHeight="200" prefWidth="600">
+                    <columns>
+                        <TableColumn fx:id="matriculeColumn" prefWidth="132.0" text="Matricule" />
+                        <TableColumn fx:id="nomColumn" prefWidth="202.0" text="Nom" />
+                        <TableColumn fx:id="contactColumn" prefWidth="265.0" text="Contact" />
+                    </columns>
+                </TableView>
+
+                <!-- TableView pour afficher les séances -->
+                <Label styleClass="titre" text="Liste des séances" />
+                <TableView fx:id="seancesTable" prefHeight="200" prefWidth="600">
+                    <columns>
+                        <TableColumn fx:id="classeColumn" prefWidth="119.0" text="Classe" />
+                        <TableColumn fx:id="matiereColumn" prefWidth="101.0" text="Matière" />
+                        <TableColumn fx:id="jourColumn" prefWidth="98.0" text="Jour" />
+                        <TableColumn fx:id="heureColumn" prefWidth="103.0" text="Heure" />
+                        <TableColumn fx:id="matriculeEnseignantColumn" prefWidth="178.0" text="Matricule Enseignant" />
+                    </columns>
+                </TableView>
+            </VBox>
+        </HBox>
+    </VBox>
+</ScrollPane>

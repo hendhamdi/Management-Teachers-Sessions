@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane fitToWidth="true" stylesheets="@../css/enseignants.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EnseignantController">
+    <VBox spacing="0" style="-fx-padding: 0;" stylesheets="@../css/enseignants.css">
+        <Region style="-fx-opacity: 0.5;" styleClass="background-overlay" stylesheets="@../css/enseignants.css" />
+        <VBox fx:id="contentVBox" styleClass="background-pane">
+            <HBox spacing="20">
+                <!-- VBox pour les formulaires -->
+                <VBox prefHeight="788.0" prefWidth="708.0" spacing="10" style="-fx-padding: 50;">
+                    <Label styleClass="titre" text="Formulaire d'enregistrement des enseignants" />
+                    <GridPane hgap="10" prefHeight="258.0" prefWidth="450.0" vgap="10">
+                        <Label text="Nom :" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <TextField fx:id="nomField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Label text="Matricule :" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <TextField fx:id="matriculeField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Contact :" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <TextField fx:id="contactField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button onAction="#chercherEnseignant" prefHeight="40.0" prefWidth="111.0" text="Chercher" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                        <Button onAction="#enregistrerEnseignant" text="Enregistrer" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Button onAction="#modifierEnseignant" prefHeight="40.0" prefWidth="109.0" text="Modifier" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                        <Button onAction="#supprimerEnseignant" prefHeight="40.0" prefWidth="113.0" text="Supprimer" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <columnConstraints>
+                            <ColumnConstraints />
+                            <ColumnConstraints />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints />
+                        </rowConstraints>
+                    </GridPane>
+                    <Label style="-fx-padding: 20 0 0 0;" styleClass="titre" text="Formulaire d'enregistrement des séances" />
+                    <GridPane hgap="10" prefHeight="320.0" prefWidth="327.0" vgap="10">
+                        <Label text="Classe :" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <ComboBox fx:id="classeComboBox" prefHeight="46.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="1ère" />
+                                    <String fx:value="2ème" />
+                                    <String fx:value="3ème" />
+                                    <String fx:value="4ème" />
+                                    <String fx:value="5ème" />
+                                    <String fx:value="6ème" />
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                        <Label text="Matière :" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="matiereComboBox" prefHeight="46.0" prefWidth="178.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Math" />
+                                    <String fx:value="Sciences" />
+                                    <String fx:value="Arabe" />
+                                    <String fx:value="Anglais" />
+                                    <String fx:value="Français" />
+                                    <String fx:value="Histoire" />
+                                    <!-- Ajouter d'autres matières si nécessaire -->
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                        <Label text="Jour :" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <ComboBox fx:id="jourComboBox" prefHeight="46.0" prefWidth="216.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Lundi" />
+                                    <String fx:value="Mardi" />
+                                    <String fx:value="Mercredi" />
+                                    <String fx:value="Jeudi" />
+                                    <String fx:value="Vendredi" />
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                        <Label text="Heure :" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                        <ComboBox fx:id="heureComboBox" prefHeight="46.0" prefWidth="181.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="1ère Heure" />
+                                    <String fx:value="2ème Heure" />
+                                    <String fx:value="3ème Heure" />
+                                    <String fx:value="4ème Heure" />
+                                    <String fx:value="5ème Heure" />
+                                    <String fx:value="6ème Heure" />
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                        <Label text="Matricule Enseignant :" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                        <TextField fx:id="matriculeEnseignantField" prefHeight="46.0" prefWidth="325.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Button onAction="#enregistrerSeance" text="Enregistrer" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                        <Button onAction="#ouvrirRequetes" prefHeight="40.0" prefWidth="165.0" text="Requêtes" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <columnConstraints>
+                            <ColumnConstraints maxWidth="230.0" minWidth="171.0" prefWidth="212.0" />
+                            <ColumnConstraints maxWidth="178.0" minWidth="125.0" prefWidth="137.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints />
+                        </rowConstraints>
+                    </GridPane>
+                </VBox>
+                <!-- VBox pour les tableaux -->
+                <VBox spacing="10" style="-fx-padding: 50;" stylesheets="@../css/enseignants.css">
+                    <Label styleClass="titre" text="Liste des enseignants" />
+                    <TableView fx:id="enseignantsTable" prefHeight="272.0" prefWidth="600">
+                        <columns>
+                            <TableColumn fx:id="matriculeColumn" prefWidth="158.0" text="Matricule" />
+                            <TableColumn fx:id="nomColumn" prefWidth="176.0" text="Nom" />
+                            <TableColumn fx:id="contactColumn" prefWidth="265.0" text="Contact" />
+                        </columns>
+                    </TableView>
+                    <Label lineSpacing="2.7" prefHeight="37.0" prefWidth="210.0" styleClass="titre" text="Liste des séances" />
+                    <TableView fx:id="seancesTable" prefHeight="284.0" prefWidth="600.0">
+                        <columns>
+                            <TableColumn fx:id="classeColumn" prefWidth="119.0" text="Classe" />
+                            <TableColumn fx:id="matiereColumn" prefWidth="101.0" text="Matière" />
+                            <TableColumn fx:id="jourColumn" prefWidth="98.0" text="Jour" />
+                            <TableColumn fx:id="heureColumn" prefWidth="103.0" text="Heure" />
+                            <TableColumn fx:id="matriculeEnseignantColumn" prefWidth="178.0" text="Enseignant" />
+                        </columns>
+                    </TableView>
+                </VBox>
+            </HBox>
+            <HBox alignment="CENTER" spacing="20" stylesheets="@../css/enseignants.css">
+                <Button onAction="#quitter" text="Quitter" />
+            </HBox>
+        </VBox>
+    </VBox>
+</ScrollPane>

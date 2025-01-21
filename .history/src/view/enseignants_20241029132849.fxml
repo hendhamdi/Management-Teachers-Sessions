@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<ScrollPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fitToWidth="true" fx:controller="controller.EnseignantController">
+    <VBox spacing="10" style="-fx-padding: 20;" stylesheets="@css/enseignants.css">
+        <HBox spacing="20">
+            <!-- VBox pour les formulaires -->
+            <VBox spacing="10" style="-fx-padding: 20;">
+                <!-- Titre du formulaire d'enregistrement des enseignants -->
+                <Label text="Formulaire d'enregistrement des enseignants" styleClass="titre"/>
+
+                <!-- Formulaire d'enregistrement des enseignants -->
+                <GridPane hgap="10" vgap="10">
+                    <Label text="Nom :" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <TextField fx:id="nomField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                    <Label text="Matricule :" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                    <TextField fx:id="matriculeField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                    <Label text="Contact :" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                    <TextField fx:id="contactField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                    <Button text="Chercher" onAction="#chercherEnseignant" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                    <Button text="Enregistrer" onAction="#enregistrerEnseignant" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                    <Button text="Modifier" onAction="#modifierEnseignant" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                    <Button text="Supprimer" onAction="#supprimerEnseignant" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+                </GridPane>
+
+                <!-- Formulaire d'enregistrement des séances -->
+                <Label text="Formulaire d'enregistrement des séances" styleClass="titre" style="-fx-padding: 20 0 0 0;"/>
+                
+                <GridPane hgap="10" vgap="10">
+                    <Label text="Classe :" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <ComboBox fx:id="classeComboBox" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+                    <Label text="Matière :" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                    <ComboBox fx:id="matiereComboBox" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+                    <Label text="Jour :" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                    <ComboBox fx:id="jourComboBox" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+                    <Label text="Heure :" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                    <ComboBox fx:id="heureComboBox" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+
+                    <Label text="Matricule Enseignant :" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                    <TextField fx:id="matriculeEnseignantField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                    <Button text="Enregistrer" onAction="#enregistrerSeance" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                    <Button text="Requêtes" onAction="#ouvrirRequetes" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+                </GridPane>
+            </VBox>
+
+            <!-- VBox pour les tableaux -->
+            <VBox spacing="10" style="-fx-padding: 20;">
+                <!-- TableView pour afficher les enseignants -->
+                <Label text="Liste des enseignants" styleClass="titre"/>
+                <TableView fx:id="enseignantsTable" prefHeight="200" prefWidth="500">
+                    <columns>
+                        <TableColumn text="Matricule" fx:id="matriculeColumn"/>
+                        <TableColumn text="Nom" fx:id="nomColumn"/>
+                        <TableColumn text="Contact" fx:id="contactColumn"/>
+                    </columns>
+                </TableView>
+
+                <!-- TableView pour afficher les séances -->
+                <Label text="Liste des séances" styleClass="titre"/>
+                <TableView fx:id="seancesTable" prefHeight="200" prefWidth="500">
+                    <columns>
+                        <TableColumn text="Classe" fx:id="classeColumn"/>
+                        <TableColumn text="Matière" fx:id="matiereColumn"/>
+                        <TableColumn text="Jour" fx:id="jourColumn"/>
+                        <TableColumn text="Heure" fx:id="heureColumn"/>
+                        <TableColumn text="Matricule Enseignant" fx:id="matriculeEnseignantColumn"/>
+                    </columns>
+                </TableView>
+            </VBox>
+        </HBox>
+    </VBox>
+</ScrollPane>

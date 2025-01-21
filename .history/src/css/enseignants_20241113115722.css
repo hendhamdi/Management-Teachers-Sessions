@@ -1,0 +1,52 @@
+.root {
+    -fx-background-image: url('../images/image.jpg');
+    -fx-background-size: cover;
+    /* Couvre toute la fenêtre */
+    -fx-background-position: center;
+    /* Centre l'image */
+}
+
+.background-overlay {
+-fx-opacity: 0.2;
+}
+
+/* Style pour les titres */
+.titre {
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #955303;
+    /* Couleur du texte */
+}
+
+/* Style pour les boutons */
+.button {
+    -fx-background-color: #f2b008;
+    /* Couleur de fond */
+    -fx-text-fill: white;
+    /* Couleur du texte */
+    -fx-padding: 10px 20px;
+    /* Rembourrage */
+    -fx-font-size: 14px;
+    /* Taille de la police */
+}
+
+.button:hover {
+    -fx-background-color: #eac861;
+    /* Couleur de fond lors du survol */
+}
+
+/* Style pour les champs de texte */
+.text-field {
+    -fx-background-color: #f0f0f0;
+    /* Couleur de fond */
+    -fx-border-color: #ccc;
+    /* Couleur de la bordure */
+}
+
+/* Style pour les ComboBoxes */
+.combo-box {
+    -fx-background-color: #f0f0f0;
+    /* Couleur de fond */
+    -fx-border-color: #ccc;
+    /* Couleur de la bordure */
+}

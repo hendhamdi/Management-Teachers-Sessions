@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EnseignantController">
+    <children>
+        <!-- Formulaire d'enregistrement des enseignants -->
+        <Group layoutX="10" layoutY="10">
+            <Label text="Enregistrement des Enseignants" styleClass="header"/>
+            <TextField fx:id="nomField" promptText="Nom" layoutX="10" layoutY="30" />
+            <TextField fx:id="matriculeField" promptText="Matricule" layoutX="10" layoutY="60" />
+            <TextField fx:id="contactField" promptText="Contact" layoutX="10" layoutY="90" />
+            
+            <Button text="Enregistrer" onAction="#enregistrerEnseignant" layoutX="10" layoutY="120" />
+            <Button text="Chercher" onAction="#chercherEnseignant" layoutX="100" layoutY="120" />
+        </Group>
+
+        <!-- Formulaire d'enregistrement des séances -->
+        <Group layoutX="250" layoutY="10">
+            <Label text="Enregistrement des Séances de Cours" styleClass="header"/>
+            <ComboBox fx:id="classeComboBox" layoutX="10" layoutY="30" promptText="Classe" />
+            <ComboBox fx:id="matiereComboBox" layoutX="10" layoutY="70" promptText="Matière" />
+            <ComboBox fx:id="jourComboBox" layoutX="10" layoutY="110" promptText="Jour" />
+            <ComboBox fx:id="heureComboBox" layoutX="10" layoutY="150" promptText="Heure" />
+            <TextField fx:id="matriculeEnseignantField" promptText="Matricule Enseignant" layoutX="10" layoutY="190" />
+            
+            <Button text="Enregistrer" onAction="#enregistrerSeance" layoutX="10" layoutY="230" />
+            <Button text="Requêtes" onAction="#ouvrirRequetes" layoutX="100" layoutY="230" />
+        </Group>
+
+        <!-- TableView pour afficher les résultats -->
+        <TableView fx:id="table" layoutX="500" layoutY="10" prefHeight="400" prefWidth="300">
+            <columns>
+                <TableColumn fx:id="matriculeColumn" text="Matricule" />
+                <TableColumn fx:id="nomColumn" text="Nom" />
+                <TableColumn fx:id="contactColumn" text="Contact" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

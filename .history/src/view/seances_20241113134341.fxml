@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane fitToWidth="true" prefHeight="783.0" prefWidth="1154.0" stylesheets="@../css/seances.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SeanceController">
+    <VBox prefHeight="781.0" prefWidth="1160.0" spacing="10" styleClass="root">
+         <Region style="-fx-opacity: 0.5;" styleClass="background-overlay" stylesheets="@../css/seances.css" />
+      
+        <!-- Titre de la page -->
+        <Label styleClass="titre" text="Les séances de cours dans la semaine pour une matière dans une classe." />
+        
+        <!-- Formulaire de recherche des séances -->
+        <GridPane hgap="10" prefHeight="117.0" prefWidth="1105.0" vgap="10">
+            <Label text="Classe :" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <ComboBox fx:id="classeComboBox" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            
+            <Label text="Matière :" GridPane.rowIndex="3" />
+            <ComboBox fx:id="matiereComboBox" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            
+            <Button onAction="#chercherSeance" text="Chercher" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="26.0" minHeight="0.0" prefHeight="26.0" />
+            <RowConstraints maxHeight="26.0" minHeight="0.0" prefHeight="0.0" />
+            <RowConstraints maxHeight="36.0" minHeight="0.0" prefHeight="0.0" />
+            <RowConstraints maxHeight="36.0" minHeight="0.0" prefHeight="36.0" />
+            <RowConstraints />
+            <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+            <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+         </rowConstraints>
+        </GridPane>
+        
+        <!-- Tableau des résultats des séances -->
+        <Label styleClass="titre" text="Liste des séances" />
+        <TableView fx:id="resultList" prefHeight="379.0" prefWidth="1043.0">
+            <columns>
+                <TableColumn fx:id="classeColumn" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="matiereColumn" prefWidth="121.0" text="Classe" />
+                <TableColumn fx:id="jourColumn" prefWidth="109.0" text="Matiere" />
+                <TableColumn fx:id="heureColumn" minWidth="0.0" prefWidth="105.0" text="Jour" />
+            <TableColumn prefWidth="121.0" text="Heure" />
+            <TableColumn prefWidth="238.0" text="En.Nom" />
+            <TableColumn prefWidth="382.0" text="En.Contact" />
+            </columns>
+        </TableView>
+      <Label text="Emploi du temps de la classe" />
+      <GridPane hgap="10" vgap="10">
+         <children>
+            <Label text="Id : " GridPane.rowIndex="2" />
+            <Label text="Classe:" GridPane.rowIndex="5" />
+            <Button onAction="#chercherSeance" prefHeight="40.0" prefWidth="106.0" text="Chercher" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="matiereComboBox1" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Button onAction="#chercherSeance" text="Supprimer" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints maxHeight="26.0" minHeight="0.0" prefHeight="26.0" />
+            <RowConstraints maxHeight="26.0" minHeight="0.0" prefHeight="0.0" />
+            <RowConstraints maxHeight="36.0" minHeight="0.0" prefHeight="0.0" />
+            <RowConstraints maxHeight="36.0" minHeight="0.0" prefHeight="36.0" />
+            <RowConstraints />
+            <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+            <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+         </rowConstraints>
+      </GridPane>
+    </VBox>
+</ScrollPane>

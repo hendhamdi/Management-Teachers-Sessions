@@ -1,0 +1,55 @@
+.root {
+    -fx-background-image: url('../images/image.jpg');
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+.background-overlay {
+    -fx-opacity: 0.2;
+}
+
+.titre {
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #955303;
+}
+
+.titre1 {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+
+.titre1 TextField {
+    -fx-font-size: 17px;
+}
+
+.button {
+    -fx-background-color: #f2b008;
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 14px;
+}
+
+.button:hover {
+    -fx-background-color: #eac861;
+}
+
+.text-field {
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #ccc;
+}
+
+.combo-box {
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #ccc;
+}
+
+.table-view .column-header .label {
+    -fx-font-weight: bold;
+    -fx-font-size: 17px;
+}
+.table-view {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+

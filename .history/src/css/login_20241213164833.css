@@ -1,0 +1,67 @@
+/* Style de la racine */
+.root {
+    -fx-background-image: url('../images/image.jpg');
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-padding: 20;
+}
+
+/* Label principal */
+.title-label {
+    -fx-font-size: 35px;
+    -fx-font-weight: bold;
+    -fx-padding-top: 20px;
+    -fx-text-fill: #f2b008;
+}
+
+/* Champs de texte */
+/* Champs de texte */
+.text-field {
+    -fx-font-size: 16px;
+    -fx-pref-width: 250px;
+    /* Réduire la largeur */
+    -fx-max-width: 250px;
+    /* Limiter à une taille max */
+    -fx-min-width: 250px;
+    /* Limiter à une taille min */
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+/* Champs de mot de passe */
+.password-field {
+    -fx-font-size: 16px;
+    -fx-pref-width: 180px;
+    /* Réduire la largeur */
+    -fx-max-width: 180px;
+    /* Limiter à une taille max */
+    -fx-min-width: 180px;
+    /* Limiter à une taille min */
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+
+/* Bouton connexion */
+.button {
+    -fx-background-color: #f2b008;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #e0a306;
+}
+
+/* Label d'erreur */
+.error-label {
+    -fx-text-fill: red;
+    -fx-font-size: 14px;
+}
