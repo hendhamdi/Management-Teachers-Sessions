@@ -123,7 +123,7 @@ Perform comprehensive tests to ensure:
 - The user interface is intuitive, responsive, and visually appealing.  
 ![Login Page](https://github.com/hendhamdi/Gestion-Enseignants-Seances/blob/main/src/images/login.png)
 ![Register Page](https://github.com/hendhamdi/Gestion-Enseignants-Seances/blob/main/src/images/register.png)  
-![enseignant Page](https://github.com/hendhamdi/Gestion-Enseignants-Seances/blob/main/src/images/enseignant.png)  
+![enseignant Page](https://github.com/hendhamdi/Gestion-Enseignants-Seances/blob/main/src/images/ensigant.png) 
 ![seance Page](https://github.com/hendhamdi/Gestion-Enseignants-Seances/blob/main/src/images/seance.png) 
 
 ---
