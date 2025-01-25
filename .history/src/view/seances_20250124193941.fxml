@@ -17,7 +17,7 @@
 
         <!-- Formulaire de recherche des séances -->
         <VBox spacing="15" style="-fx-padding: 15;">
-            <Label styleClass="titre1" text="Les séances de cours dans la semaine pour une matière dans une classe." />
+            <Label styleClass="titre" text="Les séances de cours dans la semaine pour une matière dans une classe." />
             <GridPane styleClass="titre1" hgap="10" vgap="10">
                 <Label text="Classe :" GridPane.columnIndex="0" GridPane.rowIndex="0" />
                 <ComboBox fx:id="classeRechercheComboBox" prefHeight="30.0" prefWidth="150.0" styleClass="combo-box" GridPane.columnIndex="1" GridPane.rowIndex="0" />
@@ -80,13 +80,7 @@
                 <Label text="Classe :" GridPane.rowIndex="1" styleClass="titre1" />
                 <ComboBox fx:id="classeEmploiComboBox" prefHeight="30.0" prefWidth="150.0" styleClass="combo-box" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                 <Button onAction="#chercherEmploiTemps" styleClass="button" text="Chercher" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                <graphic>
-        <ImageView fx:id="iconSearch" fitHeight="20.0" fitWidth="20.0" preserveRatio="true">
-            <image>
-                <Image url="@../images/search_icon.png"/>
-            </image>
-        </ImageView>
-    </graphic>
+                
                 <columnConstraints>
                     <ColumnConstraints />
                     <ColumnConstraints />
