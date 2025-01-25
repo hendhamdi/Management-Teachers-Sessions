@@ -121,7 +121,10 @@ Perform comprehensive tests to ensure:
 - The functionality of each feature works as expected.  
 - Database interactions (e.g., insert, update, delete, query) are reliable.  
 - The user interface is intuitive, responsive, and visually appealing.  
-![Login Page](images/login.png)  
+![Login Page](https://github.com/hendhamdi/Gestion-Enseignants-Seances/blob/main/src/images/login.png)
+![Register Page](https://github.com/hendhamdi/Gestion-Enseignants-Seances/blob/main/src/images/register.png)  
+![enseignant Page](https://github.com/hendhamdi/Gestion-Enseignants-Seances/blob/main/src/images/enseignant.png.png)  
+![seance Page](https://github.com/hendhamdi/Gestion-Enseignants-Seances/blob/main/src/images/seance.png) 
 
 ---
 
