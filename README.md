@@ -120,7 +120,8 @@ Style the graphical elements to enhance the user experience and improve the visu
 Perform comprehensive tests to ensure:  
 - The functionality of each feature works as expected.  
 - Database interactions (e.g., insert, update, delete, query) are reliable.  
-- The user interface is intuitive, responsive, and visually appealing.  
+- The user interface is intuitive, responsive, and visually appealing.
+  
 ![Login Page](https://github.com/hendhamdi/Gestion-Enseignants-Seances/blob/main/src/images/login.png)
 ![Register Page](https://github.com/hendhamdi/Gestion-Enseignants-Seances/blob/main/src/images/register.png)  
 ![enseignant Page](https://github.com/hendhamdi/Gestion-Enseignants-Seances/blob/main/src/images/ensigant.png) 
