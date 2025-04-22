@@ -1,6 +1,6 @@
-# Teacher and Class Sessions Management Project  
+# 👩‍🏫Teacher and Class Sessions Management Project  
 
-## Project Description  
+## 📝Project Description  
 
 This JavaFX application allows for the management of school schedules. It includes the following features:  
 - Teacher registration.  
@@ -11,7 +11,7 @@ The project uses **MySQL** for data management and **JavaFX** for the graphical 
 
 ---
 
-### Key Features:  
+### ✨Key Features:  
 - A **Login/Register section** to secure access to the application and differentiate between users.  
 - **Teacher registration form**: Allows adding, modifying, deleting, and searching for teachers in the database.  
 - **Class session registration form**: Allows adding class sessions, selecting a class, subject, day, time, and the associated teacher.  
@@ -20,7 +20,7 @@ The project uses **MySQL** for data management and **JavaFX** for the graphical 
 
 ---
 
-## Technologies Used  
+## 🛠️Technologies Used  
 
 - **JavaFX**: For creating graphical interfaces and managing the display.  
 - **FXML**: For declaratively defining user interfaces.  
@@ -29,7 +29,7 @@ The project uses **MySQL** for data management and **JavaFX** for the graphical 
 
 ---
 
-## Development Steps  
+## ⚙️Development Steps  
 
 To ensure the project functions correctly, certain libraries and dependencies must be added:  
 
@@ -46,7 +46,7 @@ To ensure the project functions correctly, certain libraries and dependencies mu
 
 ---
 
-### 1. **Database Design**  
+### 🧱1. **Database Design**  
 - Create the `emploidutemps_db` database in MySQL.  
 - Create the `enseignants`, `seances`, and `admin` tables with the following columns:  
 
@@ -79,7 +79,7 @@ To ensure the project functions correctly, certain libraries and dependencies mu
    
 
 
-### 2. **Graphical Interface Development Using Scene Builder**  
+### 🎨2. **Graphical Interface Development Using Scene Builder**  
 
 Scene Builder is a graphical tool for designing JavaFX interfaces without directly writing XML code (FXML).  
 
@@ -92,14 +92,14 @@ Scene Builder is a graphical tool for designing JavaFX interfaces without direct
 
 ---
 
-### 3. **Java Controller Development**  
+### 🧠3. **Java Controller Development**  
 
 Develop the controller classes to handle the logic for user interactions with the graphical elements.  
 Each controller should be linked to its corresponding FXML file to handle events and manage data.  
 
 ---
 
-### 4. **Interface Customization with CSS**  
+### 🖼️4. **Interface Customization with CSS**  
 
 Style the graphical elements to enhance the user experience and improve the visual appearance.  
 - Use a `style.css` file to define the appearance of buttons, text fields, and other elements.  
@@ -115,7 +115,7 @@ Style the graphical elements to enhance the user experience and improve the visu
 
 ---
 
-### 5. **Testing**  
+### 🧪5. **Testing**  
 
 Perform comprehensive tests to ensure:  
 - The functionality of each feature works as expected.  
@@ -128,7 +128,7 @@ Perform comprehensive tests to ensure:
 
 ---
 
-### **Conclusion**  
+### 🧾**Conclusion**  
 
 This project helps in mastering the use of JavaFX for creating graphical user interfaces and integrating Scene Builder for rapid and efficient visual design.  
 
